@@ -1,0 +1,51 @@
+{
+    "inbounds": [
+      {
+        "port": 1080,
+        "protocol": "socks",
+        "sniffing": {
+          "enabled": true,
+          "destOverride": ["http", "tls"]
+        },
+        "settings": {
+          "auth": "noauth"
+        },
+        "tag": "socks"
+      },
+      {
+        "listen": "127.0.0.1",
+        "port": 10809,
+        "protocol": "http",
+        "settings": {
+          "userLevel": 8
+        },
+        "tag": "http"
+      }
+    ],
+    "outbounds": [
+      {
+        "protocol": "vmess",
+        "settings": {
+          "vnext": [
+            {
+              "address": "**节点地址**",
+              "port": 443,
+              "users": [
+                {
+                  "id": "**V2Ray UUID**",
+                  "alterId": 1
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "ws",
+          "security": "tls",
+          "wsSettings": {
+            "path": "/v2"
+          }
+        }
+      }
+    ]
+  }

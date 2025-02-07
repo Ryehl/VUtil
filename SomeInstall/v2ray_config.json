@@ -1,0 +1,24 @@
+{
+  "__FILE_PATH__": "/usr/local/etc/v2ray/config.json",
+  
+  "inbounds": [
+    {
+      "port": 8901, 
+      "protocol": "vmess",
+      "settings": {
+        "clients": [
+          {
+            "id": "<UUID>",
+            "alterId": 0
+          }
+        ]
+      }
+    }
+  ],
+  "outbounds": [
+    {
+      "protocol": "freedom",  
+      "settings": {}
+    }
+  ]
+}
